@@ -9,8 +9,12 @@ public class Principal {
 //		AtvDois();
 //		AtvTres();
 //		AtvQuatro();
-		AtvCinco();
+//		AtvCinco();
 //		AtvSeis();
+//		AtvSete();
+//		AtvOito();
+//		AtvNove();
+//		AtvDez();
 	}
 
 	public static void AtvUm(){
@@ -47,7 +51,7 @@ public class Principal {
 	}
 	
 	public static void AtvQuatro(){
-		var retangulo = new Retangulo(2, 5);
+		var retangulo = new Retangulo(3, 4);
 		var areaRetangulo = retangulo.getArea();
 		var perimetroRetangulo = retangulo.getPerimetro();
 
@@ -72,5 +76,41 @@ public class Principal {
 		System.out.println("Estado atual: " + pessoa.classificacaoIMC());
 		System.out.printf("IMC: %.2f", pessoa.calculoIMC());
 
+	}
+	
+	public static void AtvSete()
+	{
+		var contaLuz = new ContaLuz(110, 2.8);
+		System.out.printf("Valor da conta: R$%.2f", contaLuz.calcularValorTotal());
+	}
+	
+	public static void AtvOito()
+	{
+		var bicicletaAlugada = new BicicletaAlugada(2, 6.5);
+		System.out.println("Quantidade de horas alugadas: " + bicicletaAlugada.getHoras());
+		System.out.printf("Valor da hora: R$%.2f", bicicletaAlugada.getValorHora());
+		System.out.printf("\nValor a ser pago: R$%.2f", bicicletaAlugada.calcularValor());
+	}
+
+	public static void AtvNove()
+	{
+		var produto = new ProdutoEstoque("Caneta", 20);
+
+		produto.removerEstoque(50);
+
+		produto.adicionarEstoque(100);
+
+		System.out.println("Quantidade em estoque: " + produto.getQuantidade());
+
+	}
+
+	public static void AtvDez()
+	{
+		var temp = new Temperatura(28);
+		System.out.println("Temperatura em Celsius: " + temp.getTemperatura() + "C");
+		var tempKelvin = temp.paraKelvin();
+		System.out.println("Convertido em Kelvin: " + tempKelvin + "K");
+		var tempFahrenheit = temp.paraFahrenheit();
+		System.out.println("Convertido em Fahrenheit: " + tempFahrenheit + "F");
 	}
 }
